@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddData"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.CardView"
+        app:cardCornerRadius="20dp"
+        android:elevation="5dp"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/edit_text_back"
+            >
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD DATA"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="20dp"
+                />
+
+            <EditText
+                android:id="@+id/edAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Amount"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+
+                />
+            <EditText
+                android:id="@+id/edReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Reason"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="30dp"
+                android:textSize="18sp"
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Intem"
+                android:textAllCaps="false"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>

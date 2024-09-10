@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aguafina_script</item>
+        <item>@font/aladin</item>
+        <item>@font/alkalami</item>
+        <item>@font/bacasime_antique</item>
+        <item>@font/gorditas</item>
+        <item>@font/inknut_antiqua_bold</item>
+    </array>
+</resources>
