@@ -4,5 +4,4 @@
         android:id="@+id/logOut"
         android:title="Log Out"
         />
-
 </menu>

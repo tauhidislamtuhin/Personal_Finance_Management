@@ -1,28 +1,24 @@
 package com.tittech.personalfinancemanagement;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.core.app.ActivityCompat;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.tittech.personalfinancemanagement.authentication.LogIn;
 import com.tittech.personalfinancemanagement.db.DatabaseHelper;
+
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
@@ -92,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ShowData.class));
             }
         });
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 102);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this, LogIn.class));
                             finish();
                         }
-
                         return true;
                     }
                 });
@@ -117,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    
 
     //=================================================UpdateUI
     private void updateUI() {

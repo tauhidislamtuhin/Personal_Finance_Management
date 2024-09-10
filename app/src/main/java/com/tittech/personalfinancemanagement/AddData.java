@@ -87,6 +87,8 @@ public class AddData extends AppCompatActivity {
 
                             if (incomeInserted) {
                                 tvTitle.setText("Income Added");
+                                edAmount.setText("");
+                                edReason.setText("");
                                 Toast.makeText(AddData.this, "Income Added", Toast.LENGTH_SHORT).show();
                             } else
                                 Toast.makeText(AddData.this, "something wrong", Toast.LENGTH_SHORT).show();
